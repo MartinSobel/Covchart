@@ -41,7 +41,8 @@ async function chartIt(){
       scales: {
         xAxes: [{
           gridLines: {
-              display:false
+              display:false,
+              drawBorder: false
           }
         }],
         yAxes: [{
@@ -49,7 +50,8 @@ async function chartIt(){
                 display: false
             },
             gridLines: {
-              display:false
+              display:false,
+              drawBorder: false
           }   
         }]
       },
