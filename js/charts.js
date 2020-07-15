@@ -1,8 +1,21 @@
-const frequentCountrys = ["argentina", "italy", "spain"];
+// const frequentCountrys = ["argentina", "italy", "spain"];
 
-drawCurve("argentina");
+function drawCurves(inputAarray){
+  for (let i = 0 ; i < inputAarray.length ; i++){
+    drawCurve(inputAarray[i]);
+  }
+}
+
+drawCurve("italy");
 
 function drawCurve(inputCountry){
+  var canvas = document.createElement('canvas');
+  canvas.id = "myChart";
+  canvas.classList.add("draggable");
+
+  var pos = document.getElementById("nav");
+  pos.appendChild(canvas);
+
   const country = inputCountry;
   const values = [];
   const newLabels = [];
@@ -10,7 +23,6 @@ function drawCurve(inputCountry){
   chartIt();
 
   async function getData(){
-
     const apiUrl = 'https://api.covid19api.com/dayone/country/' + country;
     const response = await fetch(apiUrl);
     const data = await response.json();
@@ -74,7 +86,7 @@ function drawCurve(inputCountry){
         }
       }
     });
-    chart.canvas.parentNode.style.width = '200px';
+    chart.canvas.parentNode.style.width = '250px';
     chart.canvas.parentNode.style.height = '100px';
   }
 }

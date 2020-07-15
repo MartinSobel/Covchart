@@ -3,35 +3,67 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://img.icons8.com/flat_round/64/000000/bar-chart--v1.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <title>Curve Art</title>
+  <title>Covchart</title>
 </head>
 
 <body>
-  <div class="wrapper">
-    <nav class="sidebar">
-      <div class="sidebar-header">
-        <h5>Most used curves</h5>
+  <div id="info">
+    <div class="d-flex flex-row-reverse">
+      <div class="p-2">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+          About
+        </button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">what is this?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                I'm me!
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <canvas id="myChart" class="draggable"></canvas>
-    </nav>
-
+      <div class="p-2"></div>
+    </div>
   </div>
 
+  <div id="mainTitle">Make art with the COVID-19 curves!</div>
 
+  <nav class="sidebar" id="nav">
+    <div class="sidebar-header">
+      <h4>Charts</h4>
+      <div class="dropdown px-4">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sort by
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#" onclick="MyFunction();">Most used</a>
+          <a class="dropdown-item" href="#">Alphabetic order</a>
+        </div>
+      </div>
+    </div>
+  </nav>    
 
-
-
+  <canvas id="drawCanvas"></canvas>
 </body>
 
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/charts.js"></script>
   <script type="text/javascript" src="js/tools.js"></script>
-
 </html>
