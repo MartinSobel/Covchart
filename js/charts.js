@@ -1,4 +1,6 @@
-// const frequentCountrys = ["argentina", "italy", "spain"];
+const frequentCountrys = ["argentina", "italy", "cuba", "india", "chile"];
+
+drawCurves(frequentCountrys);
 
 function drawCurves(inputAarray){
   for (let i = 0 ; i < inputAarray.length ; i++){
@@ -6,11 +8,12 @@ function drawCurves(inputAarray){
   }
 }
 
-drawCurve("italy");
-
 function drawCurve(inputCountry){
+  var cName = document.createElement('p');
+  cName.id = "countryName";
+  
   var canvas = document.createElement('canvas');
-  canvas.id = "myChart";
+  canvas.id = inputCountry;
   canvas.classList.add("draggable");
 
   var pos = document.getElementById("nav");
@@ -39,7 +42,7 @@ function drawCurve(inputCountry){
 
   async function chartIt(){
     await getData();
-    const  ctx = document.getElementById('myChart').getContext('2d');
+    const  ctx = document.getElementById(inputCountry).getContext('2d');
     const chart = new Chart(ctx, {
       type: 'line',
       data: {
@@ -78,11 +81,15 @@ function drawCurve(inputCountry){
           display: false
         },
         tooltips: {
-            callbacks: {
-              label: function(tooltipItem) {
-                      return tooltipItem.yLabel;
-              }
-            }
+          enabled: false,
+          // callbacks: {
+          //   label: function(tooltipItem) {
+          //           return tooltipItem.yLabel;
+          //   }
+          // }
+        },
+        hover: {
+          mode: null
         }
       }
     });
