@@ -8,6 +8,8 @@
 Pull requests are welcome, here is a to-do list:
 - Configure custom domain for GitHub Page site
 - Make the site responsive for all screen
+- Fix strange behaviour when page loads
+- Curve that show use of the page
 
 ## Do you think I could add or improve something?
 Contact me: My email is martinsobel99@gmail.com

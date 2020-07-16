@@ -1,9 +1,14 @@
+#body{
+    background-color: #f0ecdc;
+}
+
 #nav{
-    background-color: #f3f2f2;
+    background-color: #e7e6e6;
     padding-right: 20px;
     padding-left: 20px;
     padding-top: 20px;
     min-height: calc(100vh);
+    overflow-y: scroll;
 }
 
 #info{
@@ -12,8 +17,15 @@
     top: 10px;
 }
 
+#instructions{
+    position: absolute;
+    right: 40px;
+    top: 200px;
+    background-color: #bcbebea1;
+}
+
 #drawCanvas{
-    background-color: beige;
+    background-color: #f3f2f2;
     width: 800px;
     height: 500px;
     padding: 0;
@@ -42,4 +54,20 @@
 
 .draggable{
     z-index: 100;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: #e7e6e6; 
+}
+
+::-webkit-scrollbar-thumb {
+background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #555; 
 }

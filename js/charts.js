@@ -1,6 +1,7 @@
-const frequentCountrys = ["argentina", "italy", "cuba", "india", "chile"];
+const frequentCountrys = ["argentina", "italy", "cuba", "india", "uruguay", "paraguay"];
 
 drawCurves(frequentCountrys);
+
 
 function drawCurves(inputAarray){
   for (let i = 0 ; i < inputAarray.length ; i++){
@@ -9,9 +10,13 @@ function drawCurves(inputAarray){
 }
 
 function drawCurve(inputCountry){
-  var cName = document.createElement('p');
-  cName.id = "countryName";
-  
+  var cName = document.createElement("p");
+  var node = document.createTextNode(inputCountry + ":");
+  cName.appendChild(node);
+
+  var text = document.getElementById("nav");
+  text.appendChild(cName);
+
   var canvas = document.createElement('canvas');
   canvas.id = inputCountry;
   canvas.classList.add("draggable");

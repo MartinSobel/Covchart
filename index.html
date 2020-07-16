@@ -10,7 +10,7 @@
   <title>Covchart</title>
 </head>
 
-<body>
+<body id="body">
   <div id="info">
     <div class="d-flex flex-row-reverse">
       <div class="p-2">
@@ -40,7 +40,7 @@
     </div>
   </div>
 
-  <div id="mainTitle">Let's make art with the COVID-19 curves!</div>
+  <div id="mainTitle" class="font-weight-bold">Let's make art with the COVID-19 curves!</div>
 
   <nav class="sidebar" id="nav">
     <div class="sidebar-header">
@@ -50,14 +50,20 @@
           Sort by
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#" onclick="MyFunction();">Most used</a>
+          <a class="dropdown-item" href="#" onclick="drawCurves(frequentCountrys);">Most used</a>
           <a class="dropdown-item" href="#">Alphabetic order</a>
         </div>
       </div>
     </div>
-  </nav>    
+  </nav>
 
-  <canvas id="drawCanvas"></canvas>
+  <div id="instructions" class="d-flex flex-column text-center border border-secondary">
+    <div class="p-2 font-weight-bold">Tools:</div>
+    <div class="p-2">"Click": drag and drop</div>
+    <div class="p-2">"R + Click": rotate</div>
+  </div>
+
+  <canvas id="drawCanvas" class="border border-secondary"></canvas>
 </body>
 
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
