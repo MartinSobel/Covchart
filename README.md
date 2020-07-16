@@ -1,11 +1,11 @@
 # What is this?
-## *Covchart* is a tool to create drawings, from the shape of the COVID-19 contagion curves
+### _Covchart_ is a tool to create drawings, from the shape of the COVID-19 contagion curves.
 
 # Why I made this?
-## What I want to do, is a tool to transform statistics of something that concerns us all, into art.
+### What I want to do, is a tool to transform statistics of something that concerns us all, into art.
 
 # Do you want to help?
-## Pull requests are welcome, here is a *to-do* list:
+### Pull requests are welcome, here is a *to-do* list:
 
 ### **Fix:**
 - Configure custom domain for GitHub Page site
@@ -18,4 +18,4 @@
 - Tool for rotate, delete, and delete
 
 # Do you think I could add or improve something?
-## Send me an email to martinsobel99@gmail.com
+### Send me an email to martinsobel99@gmail.com
