@@ -2,7 +2,6 @@ const frequentCountrys = ["argentina", "italy", "cuba", "india", "uruguay", "par
 
 drawCurves(frequentCountrys);
 
-
 function drawCurves(inputAarray){
   for (let i = 0 ; i < inputAarray.length ; i++){
     drawCurve(inputAarray[i]);
@@ -14,14 +13,14 @@ function drawCurve(inputCountry){
   var node = document.createTextNode(inputCountry + ":");
   cName.appendChild(node);
 
-  var text = document.getElementById("nav");
+  var text = document.getElementById('curves');
   text.appendChild(cName);
 
   var canvas = document.createElement('canvas');
   canvas.id = inputCountry;
   canvas.classList.add("draggable");
 
-  var pos = document.getElementById("nav");
+  var pos = document.getElementById('curves');
   pos.appendChild(canvas);
 
   const country = inputCountry;
@@ -98,7 +97,8 @@ function drawCurve(inputCountry){
         }
       }
     });
-    chart.canvas.parentNode.style.width = '250px';
-    chart.canvas.parentNode.style.height = '100px';
+    chart.canvas.parentNode.style.width = '350px';
+    chart.canvas.parentNode.style.height = '600px';
   }
 }
+
