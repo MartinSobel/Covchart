@@ -13,5 +13,5 @@
 - Configure custom domain for GitHub Page site
 
 ## Do you think there is something for improve?
-#### Add in Discord to: martongo#5614
-#### Send an email to martinsobel99@gmail.com
+#### Discord: martongo#5614
+#### Eemail: martinsobel99@gmail.com
