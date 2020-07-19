@@ -1,4 +1,4 @@
-const frequentCountrys = ["argentina", "italy", "cuba", "india", "uruguay", "paraguay"];
+const frequentCountrys = ["argentina", "italy", "cuba", "india", "kazakhstan", "paraguay"];
 
 drawCurves(frequentCountrys);
 
@@ -86,11 +86,6 @@ function drawCurve(inputCountry){
         },
         tooltips: {
           enabled: false,
-          // callbacks: {
-          //   label: function(tooltipItem) {
-          //           return tooltipItem.yLabel;
-          //   }
-          // }
         },
         hover: {
           mode: null
