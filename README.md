@@ -1,5 +1,5 @@
 # What is this?
-### _Covchart_ is a tool to create art, from the stasts of the COVID-19 contagion curves.
+### _Covchart_ is a tool to create art, from the stats of the COVID-19 contagion curves.
 
 # Do you want to help?
 ### Pull requests are welcome, here is a *to-do* list:
@@ -16,5 +16,5 @@
 - Tool for add colors (bucket)
 - Tool for share the creation (canvas)
 
-## Do you think I could add or improve something?
-#### Send me an email to martinsobel99@gmail.com
+## Do you think that there is something to improve?
+#### Send an email to martinsobel99@gmail.com
