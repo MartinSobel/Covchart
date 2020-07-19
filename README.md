@@ -3,7 +3,6 @@
 
 # Do you want to help?
 ### Pull requests are welcome, here is a *to-do* list:
-## **Implementations:**
 - Tool for create, rotate, delete, and copy
 - Tool for add colors (buccket)
 - Tool for share the creation
