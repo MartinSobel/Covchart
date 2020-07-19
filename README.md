@@ -16,6 +16,7 @@
 ### **Implementations:**
 - Curve that shows use of the page
 - Tool for rotate, delete, and delete
+- Tool for share the creation (canvas)
 
 ## Do you think I could add or improve something?
 #### Send me an email to martinsobel99@gmail.com
