@@ -17,5 +17,5 @@
 - Tool for share the creation
 
 ## Do you think there is something for improve?
-#### Add me on Discord: martongo#5614
-#### Send me email to martinsobel99@gmail.com
+#### Add in Discord to: martongo#5614
+#### Send an email to martinsobel99@gmail.com
