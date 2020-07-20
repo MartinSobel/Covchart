@@ -66,24 +66,13 @@ p{
 
 .curve {
     margin: 1rem auto;
-    width: 300px;
-    height: 200px;
     background-color: #fff;
 }
 
 ::-webkit-scrollbar {
     width: 10px;
 }
-  
-::-webkit-scrollbar-track {
-    background: #006a71;
-}
-
 
 ::-webkit-scrollbar-thumb {
     background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
 }
