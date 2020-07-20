@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covchart</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/curves.js" defer></script>
@@ -16,9 +17,18 @@
     <main>
         <aside id="curves">
             <h2>Curves:</h2>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Sorty by<i class="fa fa-caret-down"></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a onclick="drawCurves(frequentCountrys);">Frequency</a>
+                    <a onclick="deleteCurves();">Delete</a>
+                    <a>Continent</a>
+                    <a>Alphabet</a>
+                </div>
+            </div>
         </aside>
-        <div id="canvas">
-        </div>
+
+        <div id="canvas"></div>
     </main>
 </body>
 </html>

@@ -41,7 +41,7 @@ main {
 aside {
     padding: 1rem;
     height: auto;
-    background-color: #006a71;
+    background-color: #03747c;
 }
 
 aside h2 {
@@ -68,6 +68,47 @@ p{
     margin: 1rem auto;
     background-color: #fff;
 }
+
+.dropbtn {
+    border-radius: 10px;
+    background-color: #3498DB;
+    color: white;
+    padding: 0.7rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    z-index: 1;
+    cursor: pointer;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+.fa-caret-down{
+    padding-left: 10px;
+}
+  
+.dropdown a:hover {background-color: #ddd;}
+.show {display: block;}
 
 ::-webkit-scrollbar {
     width: 10px;

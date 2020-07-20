@@ -1,6 +1,17 @@
-const frequentCountrys = ["argentina", "italy", "cuba", "india", "kazakhstan", "paraguay"];
+const frequentCountrys = ["Argentina", "italy", "cuba", "india", "kazakhstan", "paraguay"];
+const america = [];
+const africa = [];
+const europe = [];
+const asia = [];
+const oceania = [];
 
 drawCurves(frequentCountrys);
+
+function deleteCurves(){
+  let aside = document.getElementById('curves');
+  let canvas = document.getElementById('argentina');
+  aside.removeChild(canvas);
+}
 
 function drawCurves(inputAarray){
   for (let i = 0 ; i < inputAarray.length ; i++){
@@ -18,7 +29,7 @@ function drawCurve(inputCountry){
 
   let canvas = document.createElement('canvas');
   canvas.id = inputCountry;
-  canvas.classList.add("draggable");
+  canvas.classList.add("deletable");
 
   let pos = document.getElementById('curves');
   pos.appendChild(canvas);
