@@ -89,6 +89,7 @@ p{
 }
   
 .dropdown-content {
+    min-width: 13rem;
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -97,8 +98,9 @@ p{
 }
   
 .dropdown-content a {
+    font-style: italic;
     color: black;
-    padding: 1rem 1rem;
+    padding: 0.5rem 0.5rem;
     text-decoration: none;
     display: block;
 }

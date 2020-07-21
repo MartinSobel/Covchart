@@ -20,10 +20,13 @@
             <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn">Sorty by<i class="fa fa-caret-down"></i></button>
                 <div id="myDropdown" class="dropdown-content">
-                    <a onclick="drawCurves(frequentCountrys);">Frequency</a>
-                    <a onclick="deleteCurves();">Delete</a>
-                    <a>Continent</a>
-                    <a>Alphabet</a>
+                    <a onclick="deleteCurves(); drawCurves(frequentCountrys);"> <strong>Frequently </strong>used</a>
+                    <a onclick="deleteCurves(); drawCurves(america);"><strong>Alphabetic </strong>order</a>
+                    <a>Contintinent: <strong>America</strong></a>
+                    <a>Contintinent: <strong>Asia</strong></a>
+                    <a>Contintinent: <strong>Africa</strong></a>
+                    <a>Contintinent: <strong>Europe</strong></a>
+                    <a>Contintinent: <strong>Ocenia</strong></a>
                 </div>
             </div>
         </aside>
