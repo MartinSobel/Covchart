@@ -13,11 +13,10 @@
 - Instructions div (only key letters)
 
 **Fix:**
-- Fix that sometimes not loads all the countrys charts
-- Configure continent arrays
+- Fix that sometimes not loads/loads weird the countrys charts
 
 **Possibles in the future:**
-- Searchbox in aside
+- Searchbox in aside for curves
 - Curve that shows use of the page
 - Configure custom domain for GitHub Page site
 - Make music with curves

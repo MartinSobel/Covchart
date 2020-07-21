@@ -89,7 +89,7 @@ p{
 }
   
 .dropdown-content {
-    min-width: 13rem;
+    min-width: 16rem;
     display: none;
     position: absolute;
     background-color: #f1f1f1;

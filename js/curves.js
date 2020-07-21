@@ -1,11 +1,14 @@
-const frequentCountrys = ["Argentina", "Italy", "Cuba", "India", "Kazakhstan", "Paraguay"];
-const america = ["Cuba", "Argentina"];
-const africa = [];
-const europe = [];
-const asia = [];
-const oceania = [];
+// getCountrysAviable();
+// async function getCountrysAviable(){
+//   let apiUrl = 'https://api.covid19api.com/countries';
+//   let response = await fetch(apiUrl);
+//   let data = await response.json();
+//   let arr = data.reduce((acc, cur) => cur.Country ? [...acc, cur.Country] : acc, []);
+//   console.log(arr);
+// }
 
-drawCurves(frequentCountrys);
+addContinents();
+drawCurves(allCountrys);
 
 function deleteCurves(){
   let aside = document.getElementById('curves');
@@ -20,6 +23,7 @@ function deleteCurves(){
 }
 
 function drawCurves(inputAarray){
+  deleteCurves();
   for (let i = 0 ; i < inputAarray.length ; i++){
     drawCurve(inputAarray[i]);
   }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/countrys.js" defer></script>
     <script src="js/curves.js" defer></script>
 </head>
 <body>
@@ -20,13 +21,14 @@
             <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn">Sorty by<i class="fa fa-caret-down"></i></button>
                 <div id="myDropdown" class="dropdown-content">
-                    <a onclick="deleteCurves(); drawCurves(frequentCountrys);"> <strong>Frequently </strong>used</a>
-                    <a onclick="deleteCurves(); drawCurves(america);"><strong>Alphabetic </strong>order</a>
-                    <a>Contintinent: <strong>America</strong></a>
-                    <a>Contintinent: <strong>Asia</strong></a>
-                    <a>Contintinent: <strong>Africa</strong></a>
-                    <a>Contintinent: <strong>Europe</strong></a>
-                    <a>Contintinent: <strong>Ocenia</strong></a>
+                    <a onclick="drawCurves(allCountrys)"><strong>Alphabetic </strong>order</a>
+                    <a onclick="drawCurves(southAmericaCountrys)">Contintinent: <strong>South America</strong></a>
+                    <a onclick="drawCurves(northAmericaCountrys)">Contintinent: <strong>North America</strong></a>
+                    <a onclick="drawCurves(asiaCountrys)">Contintinent: <strong>Asia</strong></a>
+                    <a onclick="drawCurves(africaCountrys)">Contintinent: <strong>Africa</strong></a>
+                    <a onclick="drawCurves(middleEastCountrys)">Contintinent: <strong>Middle East</strong></a>
+                    <a onclick="drawCurves(oceanPacificCountrys)">Contintinent: <strong>Ocean Pacific</strong></a>
+                    <a onclick="drawCurves(europeCountrys)">Contintinent: <strong>Europe</strong></a>
                 </div>
             </div>
         </aside>
