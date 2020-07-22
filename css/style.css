@@ -64,6 +64,12 @@ p{
     border: 1px solid #84a9ac;
 }
 
+#myBtn{
+    position: absolute;
+    right: 2rem;
+    top: 0.5rem;
+}
+
 .curve {
     margin: 1rem auto;
     background-color: #fff;
@@ -105,12 +111,66 @@ p{
     display: block;
 }
 
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  text-align: center;
+  color: black;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 0.5rem;
+  padding-bottom: 2rem;
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.7s;
+}
+
+h2{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.close {
+    padding-right: 20px;    
+    color: #aaa;
+    float: right;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 .fa-caret-down{
     padding-left: 10px;
 }
-  
-.dropdown a:hover {background-color: #ddd;}
-.show {display: block;}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
 
 ::-webkit-scrollbar {
     width: 10px;

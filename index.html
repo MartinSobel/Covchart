@@ -14,12 +14,20 @@
 <body>
     <header>
         <h1>Draw with COVID-19 curves!</h1>
+        <button class="dropbtn" id="myBtn">About</button>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Do you want to colaborate?</h2>
+                <h3>Join us on Github!</h3>
+            </div>
+        </div>
     </header>
     <main>
         <aside id="curves">
             <h2>Curves:</h2>
             <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Sorty by<i class="fa fa-caret-down"></i></button>
+                <button onclick="myFunction()" class="dropbtn">Filter by<i class="fa fa-caret-down"></i></button>
                 <div id="myDropdown" class="dropdown-content">
                     <a onclick="drawCurves(allCountrys)"><strong>Alphabetic </strong>order</a>
                     <a onclick="drawCurves(southAmericaCountrys)">Contintinent: <strong>South America</strong></a>
@@ -34,6 +42,12 @@
         </aside>
 
         <div id="canvas"></div>
+
+        <aside>
+            <h3>Instructions</h3>
+            <p>Click: drag and drop</p>
+            <p>"R": Rotate</p>
+        </aside>
     </main>
 </body>
 </html>

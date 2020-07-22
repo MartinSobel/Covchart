@@ -4,16 +4,11 @@
 ## Do you want to help?
 #### Pull requests are welcome, here is a *to-do* list:
 **Tools:**
-- for create, rotate, delete, and copy
+- for create, rotate, delete, and copy (on canvas)
 - for share the creation
-- for add colors
-
-**Create sections:**
-- About modal
-- Instructions div (only key letters)
 
 **Fix:**
-- Fix that sometimes not loads/loads weird the countrys charts
+- Fix that sometimes not loads/loads weird the countrys charts (load data on scroll?)
 
 **Possibles in the future:**
 - Searchbox in aside for curves
