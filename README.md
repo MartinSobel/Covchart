@@ -17,4 +17,4 @@
 - Make music with curves
 
 ## Do you think there is something for improve?
-#### Join us on [discord](https://discord.gg/Ssq4CD)
+#### Join us on [discord](https://discord.gg/4aC9tPd)
