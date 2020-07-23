@@ -15,6 +15,8 @@
 - Curve that shows use of the page
 - [Configure] custom domain for GitHub Page site 
 - Make music with curves
-https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain
+
+(https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain)
+
 ## Do you think there is something for improve?
 #### Join us on [discord](https://discord.gg/4aC9tPd)
