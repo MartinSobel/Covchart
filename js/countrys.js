@@ -1,4 +1,4 @@
-allCountrys = [];
+const allCountrys = ['Kazakhstan', 'Argentina', 'Italy'];
 
 function addContinents(){
 	addContinent(southAmericaCountrys);
@@ -13,7 +13,7 @@ function addContinents(){
 
 function addContinent(continent){
 	for (let i = 0 ; i < continent.length ; i++){
-		allCountrys.push(continent[i]);
+		// allCountrys.push(continent[i]);
 	}
 }
 

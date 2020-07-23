@@ -6,7 +6,6 @@
 //   let arr = data.reduce((acc, cur) => cur.Country ? [...acc, cur.Country] : acc, []);
 //   console.log(arr);
 // }
-
 addContinents();
 drawCurves(allCountrys);
 
@@ -115,6 +114,9 @@ function drawCurve(inputCountry){
     });
     chart.canvas.parentNode.style.width = '350px';
     chart.canvas.parentNode.style.height = '600px';
+    chart.canvas.addEventListener('click', e => {
+      lastCurve = e.target.id;
+      document.body.style.cursor = 'pointer';
+    });
   }
 }
-

@@ -33,3 +33,12 @@ span.onclick = function() {
 //     modal.style.display = "none";
 //   }
 // }
+
+let lastCurve = undefined;
+
+canvas = document.querySelector('#canvas');
+canvas.addEventListener('click', e => {
+  if (lastCurve) {
+    canvas.appendChild(document.querySelector('#' + lastCurve).cloneNode(true));
+  }
+});
