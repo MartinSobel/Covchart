@@ -8,7 +8,7 @@
 - for share the creation
 
 **Fix:**
-- Fix that sometimes not loads/loads weird the countrys charts (load data on scroll?)
+- sometimes not loads/loads weird the countries charts (load data on scroll?)
 
 **Possibles in the future:**
 - Searchbox in aside for curves
