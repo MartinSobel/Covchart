@@ -6,41 +6,48 @@
 //   let arr = data.reduce((acc, cur) => cur.Country ? [...acc, cur.Country] : acc, []);
 //   console.log(arr);
 // }
-addContinents();
+
 drawCurves(allCountrys);
 
 function deleteCurves(){
-  let aside = document.getElementById('curves');
+  let pos = document.getElementById('curves');
   let canvas = document.getElementsByTagName("canvas");
   let text = document.getElementsByTagName("p");
   while (canvas.length > 0){
     for (let i = 0 ; i < canvas.length ; i++){
-      aside.removeChild(canvas[i]);
-      aside.removeChild(text[i]);
+          pos.removeChild(canvas[i]);
+          pos.removeChild(text[i]);
     }
   }
 }
 
+
 function drawCurves(inputAarray){
   deleteCurves();
   for (let i = 0 ; i < inputAarray.length ; i++){
-    drawCurve(inputAarray[i]);
+    drawCurve(inputAarray[i], 'curves', true, true);
   }
 }
 
-function drawCurve(inputCountry){
-  let cName = document.createElement("p");
-  let node = document.createTextNode(inputCountry + ":");
-  cName.appendChild(node);
-
-  let text = document.getElementById('curves');
-  text.appendChild(cName);
+function drawCurve(inputCountry, position, textBool, onSidebar){
+  if (textBool){
+    let cName = document.createElement("p");
+    let node = document.createTextNode(inputCountry + ":");
+    cName.appendChild(node);
+  
+    let text = document.getElementById('curves');
+    text.appendChild(cName);
+  }
 
   let canvas = document.createElement('canvas');
-  canvas.id = inputCountry;
-  // canvas.classList.add("deletable");
+  
+  if (onSidebar){
+    canvas.id = inputCountry;
+  } else {
+    canvas.id = "_" + inputCountry;
+  }
 
-  let pos = document.getElementById('curves');
+  let pos = document.getElementById(position);
   pos.appendChild(canvas);
 
   const country = inputCountry;
@@ -66,6 +73,9 @@ function drawCurve(inputCountry){
 
   async function chartIt(){
     await getData();
+    if (onSidebar == false){
+      inputCountry = "_" + inputCountry;
+    }
     const  ctx = document.getElementById(inputCountry).getContext('2d');
     const chart = new Chart(ctx, {
       type: 'line',
@@ -114,9 +124,12 @@ function drawCurve(inputCountry){
     });
     chart.canvas.parentNode.style.width = '350px';
     chart.canvas.parentNode.style.height = '600px';
+
     chart.canvas.addEventListener('click', e => {
       lastCurve = e.target.id;
       document.body.style.cursor = 'pointer';
+      console.log(lastCurve);
+      drawCurve(lastCurve, 'canvas', false, false);
     });
   }
 }

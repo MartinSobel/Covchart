@@ -1,5 +1,7 @@
 const allCountrys = ['Kazakhstan', 'Argentina', 'Italy'];
 
+// addContinents();
+
 function addContinents(){
 	addContinent(southAmericaCountrys);
 	addContinent(northAmericaCountrys);
