@@ -3,12 +3,16 @@
 
 ## Do you want to help?
 #### Pull requests are welcome, here is a *to-do* list:
-**Tools:**
-- for move, rotate, delete, and copy (on canvas)
-- for share the creation
+**Tools for:**
+- move
+- rotate
+- delete
+- copy
+
+- share the creation
 
 **Fix:**
-- sometimes not loads/loads weird the countries charts (load data on scroll?) (handle error on fetch?)
+- sometimes not loads countries charts (load data on scroll?) (handle error on fetch?)
 
 **Possibles in the future:**
 - Searchbox in aside for curves

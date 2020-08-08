@@ -9,6 +9,7 @@
 html, body {
     height: 100%;
     font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
 }
 
 body {
@@ -40,6 +41,7 @@ main {
 
 aside {
     padding: 1rem;
+    margin: 0.7rem;
     height: auto;
     background-color: #03747c;
 }
@@ -58,8 +60,10 @@ p{
 }
 
 #canvas {
-    width: 60%;
-    height: 75%;
+    min-width: 60%;
+    max-width: 60%;
+    min-height: 80%;
+    max-height: 80%;
     background-color: #fff;
     border: 1px solid #84a9ac;
 }
@@ -73,6 +77,11 @@ p{
 .curve {
     margin: 1rem auto;
     background-color: #fff;
+}
+
+canvas{
+    max-height: 40rem;
+    max-width: 20rem;
 }
 
 .dropbtn {

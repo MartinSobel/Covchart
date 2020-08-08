@@ -11,7 +11,7 @@ drawCurves(allCountrys);
 
 function deleteCurves(){
   let pos = document.getElementById('curves');
-  let canvas = document.getElementsByTagName("canvas");
+  let canvas = pos.getElementsByTagName("canvas");
   let text = document.getElementsByTagName("p");
   while (canvas.length > 0){
     for (let i = 0 ; i < canvas.length ; i++){
