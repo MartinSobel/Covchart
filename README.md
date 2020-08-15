@@ -3,16 +3,10 @@
 
 ## Do you want to help?
 #### Pull requests are welcome, here is a *to-do* list:
-**Tools for:**
-- move
+**Create Tools for:**
 - rotate
 - delete
-- copy
-
 - share the creation
-
-**Fix:**
-- sometimes not loads countries charts (load data on scroll?) (handle error on fetch?)
 
 **Possibles in the future:**
 - Searchbox in aside for curves
@@ -20,7 +14,4 @@
 - [Configure](https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain) custom domain for GitHub Page site 
 - Make music with curves
 
-
-
-## Do you think there is something for improve?
-#### Join us on [discord](https://discord.gg/4aC9tPd)
+#### Join Covhart in [discord](https://discord.gg/4aC9tPd)
