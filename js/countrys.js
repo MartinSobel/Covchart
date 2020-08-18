@@ -1,23 +1,5 @@
 const allCountrys = ['Kazakhstan', 'Argentina', 'Italy'];
-
-// addContinents();
-
-function addContinents(){
-	addContinent(southAmericaCountrys);
-	addContinent(northAmericaCountrys);
-	addContinent(africaCountrys);
-	addContinent(europeCountrys);
-	addContinent(asiaCountrys);
-	addContinent(middleEastCountrys);
-	addContinent(oceanPacificCountrys);
-	allCountrys.sort();
-}
-
-function addContinent(continent){
-	for (let i = 0 ; i < continent.length ; i++){
-		// allCountrys.push(continent[i]);
-	}
-}
+//const allCountrys = ['Kazakhstan'];
 
 const southAmericaCountrys = [
 	'Argentina',
@@ -241,3 +223,20 @@ const oceanPacificCountrys = [
 	'Tuvala',
 	'Vanuata'
 ];
+
+function addContinents(){
+	addContinent(southAmericaCountrys);
+	addContinent(northAmericaCountrys);
+	addContinent(africaCountrys);
+	addContinent(europeCountrys);
+	addContinent(asiaCountrys);
+	addContinent(middleEastCountrys);
+	addContinent(oceanPacificCountrys);
+	allCountrys.sort();
+}
+
+function addContinent(continent){
+	for (let i = 0 ; i < continent.length ; i++){
+		// allCountrys.push(continent[i]);
+	}
+}

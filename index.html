@@ -6,12 +6,38 @@
     <title>Covchart</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0" defer></script>
     <script src="js/countrys.js" defer></script>
     <script src="js/curves.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+    <div class="load">
+        <h1 class="parrafo_porcentaje">Cargando graficas de los países …</h1>
+        <!-- Circle Progres Bar -->
+        <div class="cp-wrapper" data-progress="0">
+            <div class="cp-circle">
+                <div class="cp-mask cp-full">
+                    <div class="cp-fill cp-regular"></div>
+                </div>
+                <div class="cp-mask cp-half">
+                    <div class="cp-fill cp-regular"></div>
+                    <div class="cp-fill cp-fix"></div>
+                </div>
+                <div class="cp-shadow"></div>
+            </div>
+            <div class="cp-inner">
+            <div class="cp-percentage"><span class="cp-percent-number">0%</span><span class="cp-text">Complete Message Goes Here...</span></div>
+            </div>
+        </div>
+    </div>
+
     <header>
         <h1>Draw with COVID-19 curves!</h1>
         <button class="dropbtn" id="myBtn">About</button>
@@ -26,6 +52,23 @@
     <main>
         <aside id="curves">
             <h2>Curves:</h2>
+            <nav aria-label="Page navigation example" class="navigation">
+                <ul class="pagination">
+                  <li class="page-item ant">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">«</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link pagina_1" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link pagina_2" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link pagina_3" href="#">3</a></li>
+                  <li class="page-item sig">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">»</span>
+                    </a>
+                  </li>
+                </ul>
+            </nav>
             <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn">Filter by<i class="fa fa-caret-down"></i></button>
                 <div id="myDropdown" class="dropdown-content">
@@ -47,6 +90,7 @@
             <h3>Instructions</h3>
             <p><strong>Select</strong> the curves from the sidebar</p>
             <p><strong>Move</strong> with "click + drag"</p>
+            <button class="dropbtn descargar">Descargar Dibujo</button>
         </aside>
     </main>
 </body>
