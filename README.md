@@ -10,6 +10,7 @@
 - Create searchbox for curves in aside
 - Create button for share the creation in social media
 - Fix countries that loads weird
+- Adapt covchart for cell phones
 
 **Create database and:**
 - Get the charts faster
