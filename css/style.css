@@ -40,9 +40,11 @@ main {
 }
 
 aside {
+
+    color: white;
     padding: 1rem;
-    margin: 0.7rem;
-    height: auto;
+    margin: 0.1rem;
+    min-height: 100%;
     background-color: #03747c;
 }
 
@@ -60,18 +62,12 @@ p{
 }
 
 #canvas {
-    min-width: 60%;
-    max-width: 60%;
-    min-height: 80%;
-    max-height: 80%;
+    min-width: 75%;
+    max-width: 75%;
+    min-height: 95%;
+    max-height: 95%;
     background-color: #fff;
     border: 1px solid #84a9ac;
-}
-
-#myBtn{
-    position: absolute;
-    right: 2rem;
-    top: 0.5rem;
 }
 
 .curve {
@@ -85,10 +81,11 @@ canvas{
 }
 
 .dropbtn {
+    margin-right: 12px;
     border-radius: 10px;
     background-color: #3498DB;
     color: white;
-    padding: 0.7rem;
+    padding: 0.6rem;
     font-size: 1rem;
     border: none;
     cursor: pointer;
@@ -125,17 +122,19 @@ canvas{
 .show {display: block;}
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+    padding-right: 30%;
+    padding-left: 30%;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
 
 .modal-content {
   background-color: #fefefe;
@@ -157,6 +156,7 @@ h2{
 }
 
 .close {
+    margin-left: 90%;
     padding-right: 20px;    
     color: #aaa;
     float: right;
@@ -256,7 +256,7 @@ top: 67px;
 }
 .cp-wrapper[data-progress="100"] .cp-percent-number {
 display: none;
-}
+}   
 .cp-wrapper[data-progress="100"] .cp-text {
 display: block;
 }
@@ -280,4 +280,16 @@ display: block;
     left: 76px;
     width: 70%;
     display:none;
+}
+
+.nav {
+    padding-top: 2px;
+    display: flex;
+    position: absolute;
+    right: 2rem;
+    top: 0.5rem;
+}
+
+#myDropdown{
+    color: black;
 }

@@ -39,7 +39,7 @@ $(document).ready(function(){
   })
 });
 
-drawCurves(allCountrys);
+drawCurves(southAmericaCountrys);
 $('.pagina_1, .pagina_2, .pagina_3').click(function(){
   contador.pagina = parseInt(this.innerHTML)
   pagina()

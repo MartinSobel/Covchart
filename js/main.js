@@ -1,3 +1,7 @@
+function about(){
+    window.open("https://github.com/MartinSobel/Covchart/blob/master/FAQ.md", "_blank");
+}
+
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
