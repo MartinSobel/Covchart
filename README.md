@@ -2,7 +2,8 @@
 ### Pull requests are welcome, here is a *to-do* list:
 **Create Tools for:**
 - Rotate
-- Delete
+- Delete selected curve
+- Add colors
 
 **Improvements:**
 - [Configure](https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain) custom domain for GitHub Page site
