@@ -8,3 +8,5 @@
 - Can I help you with something?
 ***Yes, I recommend you to check the README.md file***
 
+- Why it's in english?
+***Is one of the most widely used languages in the world***
