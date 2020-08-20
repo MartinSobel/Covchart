@@ -1,11 +1,12 @@
 # Do you want to help?
 ### Pull requests are welcome, here is a *to-do* list:
 **Improvements:**
-- Create tool for Delete selected curve
-- [Configure](https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain) custom domain for GitHub Page site
-- Create searchbox for curves in aside
+- Create tool for delete selected curve
 - Create button for share the creation in social media
-- Fix countries that loads weird
+- Create searchbox for curves
+
+**Fix:**
+- Correct countries that loads weird
 - Adapt covchart for cell phones
 
 **Requires database:**
