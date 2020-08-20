@@ -8,6 +8,7 @@
 // }
 contador = {}
 dibujo = {objeto:0,seleccion:'',descarga:''}
+seleccion_input = {ultimo:'',fondo:'transparent'}
 
 $(document).ready(function(){
   $('.descargar').click(function(){
@@ -37,6 +38,12 @@ $(document).ready(function(){
   $('.ant').click(function(){
     pagina('ant')
   })
+  $('.color_linea').change(function(){
+    drawCurves(seleccion_input.ultimo)
+  })
+  $('.color_fondo').change(function(){
+    seleccion_input.fondo = $('.color_fondo').val();
+  })
 });
 
 drawCurves(southAmericaCountrys);
@@ -59,6 +66,7 @@ function deleteCurves(){
 
 
 function drawCurves(inputAarray){
+  seleccion_input.ultimo = inputAarray;
   deleteCurves();
   
   contador.num_ini = 0
@@ -130,7 +138,7 @@ function drawCurve(inputCountry, div){
   else{
     var canvas = document.getElementById(inputCountry);
     var imageURI = canvas.toDataURL("image/jpg");
-    $('#canvas').append( '<img style="width: 200px;" id="'+id_figura+'" src="'+imageURI+'"/>' );
+    $('#canvas').append( '<img style="width: 200px;background-color:'+seleccion_input.fondo+'" id="'+id_figura+'" src="'+imageURI+'"/>' );
   }
   
   function chartIt(){
@@ -166,7 +174,13 @@ function drawCurve(inputCountry, div){
           datasets: [{
               label: '',
               fill: false,
-              borderColor: 'rgb(0, 0, 0)',
+              borderColor: $('.color_linea').val(),
+              backgroundColor: [
+                "#f38b4a",
+                "#56d798",
+                "#ff8397",
+                "#6970d5" 
+              ],
               data: values
           }]
       },
@@ -248,12 +262,32 @@ function traer_curvas(){
 function boton_editar(id){
   dibujo.seleccion = id;
   $('.edit_tamano').remove();
-  $('#canvas').append( '<i class="fa fa-plus-circle edit_tamano e_t_plus" style="font-size:48px;color:#006a71;"></i><i class="fa fa-minus-circle edit_tamano e_t_minus" style="font-size:48px;color:#006a71;"></i>' );
+  $('#canvas').append( '<i class="fa fa-plus-circle edit_tamano e_t_plus" style="font-size:48px;color:#006a71;"></i><i class="fa fa-minus-circle edit_tamano e_t_minus" style="font-size:48px;color:#006a71;"></i><i class="fa fa-rotate-left edit_tamano e_g_izq" style="font-size:48px;color:#006a71;"></i><i class="fa fa-rotate-right edit_tamano e_g_der" style="font-size:48px;color:#006a71;"></i><i class="fa fa-close edit_tamano e_close" style="font-size:48px;color:#006a71;"></i>' );
   $('.e_t_plus').click(function(){
     $("#"+dibujo.seleccion).width($("#"+dibujo.seleccion).width()+10);
   })
   $('.e_t_minus').click(function(){
     $("#"+dibujo.seleccion).width($("#"+dibujo.seleccion).width()-10);
+  })
+  $('.e_g_izq').click(function(){
+    if($("#"+dibujo.seleccion)[0].style.webkitTransform != ''){
+      $("#"+dibujo.seleccion).css({'transform' : 'rotate('+(parseInt($("#"+dibujo.seleccion)[0].style.webkitTransform.replace('rotate(','').replace('deg)','')) -5) +'deg)'});
+    }
+    else{
+      $("#"+dibujo.seleccion).css({'transform' : 'rotate(-5deg)'});
+    }    
+  })
+  $('.e_g_der').click(function(){
+    if($("#"+dibujo.seleccion)[0].style.webkitTransform != ''){
+      $("#"+dibujo.seleccion).css({'transform' : 'rotate('+(parseInt($("#"+dibujo.seleccion)[0].style.webkitTransform.replace('rotate(','').replace('deg)','')) +5) +'deg)'});
+    }
+    else{
+      $("#"+dibujo.seleccion).css({'transform' : 'rotate(5deg)'});
+    }
+  })
+  $('.e_close').click(function(){
+    $('.edit_tamano').remove();
+    $('.figuras').css({'border':'none'});
   })
 }
 function nivel_carga(porcentaje){
