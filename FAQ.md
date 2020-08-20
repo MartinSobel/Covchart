@@ -9,7 +9,7 @@
 ***Is one of the most widely used languages in the world***
 
 - Why I can't see alll the countries?  
-***I am still working on that, soon you'll be able to enjoy all the countries in the world***
+***We are still working on that, soon you'll be able to enjoy all the countries in the world***
 
 - Why can't I use it on my cell phone?  
-***I'm working on that too***
+***We are working on that too***
