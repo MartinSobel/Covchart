@@ -16,7 +16,6 @@ $(document).ready(function(){
     $('.figuras').css({'border':'none'});
     //se quitan los botones de editar
     $('.edit_tamano').remove();
-
     html2canvas($("#canvas"), {
       onrendered: function(canvas) {
           dibujo.descarga = canvas.toDataURL("image/jpg");
@@ -138,7 +137,8 @@ function drawCurve(inputCountry, div){
   else{
     var canvas = document.getElementById(inputCountry);
     var imageURI = canvas.toDataURL("image/jpg");
-    $('#canvas').append( '<img style="width: 200px;background-color:'+seleccion_input.fondo+'" id="'+id_figura+'" src="'+imageURI+'"/>' );
+
+    $('#canvas').append('<img style="width: 200px;background-color:'+seleccion_input.fondo+'" id="'+id_figura+'" src="'+imageURI+'"/>' );
   }
   
   function chartIt(){
@@ -156,9 +156,10 @@ function drawCurve(inputCountry, div){
         return;
       }
       arr = JSON.parse(respuesta.responseText).reduce((acc, cur) => cur.Confirmed ? [...acc, cur.Confirmed] : acc, []);
-
       for (let i = 1 ; i < arr.length ; i++){
-        values.push(arr[i] - arr[i-1]);
+        if (arr[i] > arr[i-1]){
+          values.push(arr[i] - arr[i-1]);
+        }
       }
   
       for (let i = 0 ; i < values.length ; i++){

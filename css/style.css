@@ -40,10 +40,9 @@ main {
 }
 
 aside {
-
     color: white;
     padding: 1rem;
-    margin: 0.1rem;
+    margin: 0.4rem;
     min-height: 100%;
     background-color: #03747c;
 }
@@ -62,6 +61,7 @@ p{
 }
 
 #canvas {
+    margin: 0.5rem;
     min-width: 75%;
     max-width: 75%;
     min-height: 95%;
@@ -89,6 +89,13 @@ canvas{
     font-size: 1rem;
     border: none;
     cursor: pointer;
+  }
+
+  #drop{
+      padding-top: 1% !important;
+      padding-bottom: 1% !important;
+      padding-left: 35%;
+      padding-right: 34%;
   }
   
 .dropbtn:hover, .dropbtn:focus {
@@ -124,27 +131,27 @@ canvas{
 .modal {
     padding-right: 30%;
     padding-left: 30%;
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
     }
 
 .modal-content {
   background-color: #fefefe;
   text-align: center;
   color: black;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 0.5rem;
   padding-bottom: 2rem;
   border: 1px solid #888;
-  width: 30%; /* Could be more or less, depending on screen size */
+  width: 30%; 
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
   animation-duration: 0.7s;
@@ -155,12 +162,12 @@ h2{
     padding-bottom: 1rem;
 }
 
-.close {
-    margin-left: 90%;
-    padding-right: 20px;    
+.close{
+    font-size: 30px !important;
+    display: inline-block;
+    margin-top: 5%;
+    margin-left: 85%;
     color: #aaa;
-    float: right;
-    font-size: 3rem;
     font-weight: bold;
 }
 
@@ -182,7 +189,7 @@ h2{
   }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -217,13 +224,16 @@ transition: -ms-transform 0.5s;
 transition: transform 0.5s;
 border-radius: 50%;
 }
+
 .cp-wrapper .cp-circle .cp-mask {
 clip: rect(0px, 190px, 190px, 95px);
 }
+
 .cp-wrapper .cp-circle .cp-mask .cp-fill {
 clip: rect(0px, 95px, 190px, 0px);
 background-color: #006a71;
 }
+
 .cp-wrapper .cp-inner {
 width: 170px;
 height: 170px;
@@ -234,6 +244,7 @@ background-color: #fff;
 border-radius: 50%;
 box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
 }
+
 .cp-wrapper .cp-inner .cp-percentage {
 width: 153px;
 position: absolute;
@@ -246,20 +257,25 @@ color: #006a71;
 font-weight: 800;
 font-size: 22px;
 }
+
 .cp-wrapper .cp-text {
 display: none;
 font-size: 14px;
 line-height: 22px;
 }
+
 .cp-wrapper[data-progress="100"] .cp-percentage {
 top: 67px;
 }
+
 .cp-wrapper[data-progress="100"] .cp-percent-number {
 display: none;
-}   
+}
+
 .cp-wrapper[data-progress="100"] .cp-text {
 display: block;
 }
+
 .load{
     position: fixed;
     width: 100%;
@@ -270,16 +286,17 @@ display: block;
     color: #006a71;
     display:none;
 }
+
 .parrafo_porcentaje{
     padding-top: 10%;
     padding-bottom: 2%;
 }
 
 .navigation{
-    position: relative;
-    left: 76px;
-    width: 70%;
-    display:none;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .nav {
@@ -296,4 +313,48 @@ display: block;
 
 .edit_tamano{
     cursor: pointer;
+}
+
+.fa{
+    padding: 3px;
+}
+
+.colorSelection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+
+
+h3{
+    padding-bottom: 20px;
+}
+
+.page-item{
+    margin: 2%;
+}
+
+.page-item:not(:first-child) .page-link{
+    border-radius: 20px;
+    padding: 7px, 5px;
+    border-style: none;
+    background-color: #01545a;
+    color: white;
+}
+
+.page-item:last-child .page-link{
+    border-radius: 20px !important;
+    padding: 10px, 5px ;
+    border-style: none;
+}
+
+.page-item:first-child .page-link{
+    border-radius: 20px !important;
+    padding: 10px, 5px;
+    border-style: none;
+    background-color: #01545a;
+    color: white;
 }

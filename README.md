@@ -4,13 +4,10 @@
 - Create tool for delete selected curve
 - Create button for share the creation in social media
 - Create searchbox for curves
-
-**Fix:**
-- Correct countries that loads weird
 - Adapt covchart for cell phones
 
 **Requires database:**
-- Get the charts faster
+- Get the charts faster (saving data of curves)
 - Save drafts by user
 - Create a curve that shows use of the page
 

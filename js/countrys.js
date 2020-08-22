@@ -18,7 +18,6 @@ const northAmericaCountrys = [
 	'Bahamas',
 	'Barbados',
 	'Belize',
-	'Canada',
 	'Costa Rica',
 	'Cuba',
 	'Dominica',
@@ -110,7 +109,6 @@ const europeCountrys = [
 	'Denmark',
 	'Estonia',
 	'Finland',
-	'France',
 	'Georgia',
 	'Germany',
 	'Greece',
@@ -128,7 +126,6 @@ const europeCountrys = [
 	'Moldova',
 	'Monaco',
 	'Montenegro',
-	'Netherlands',
 	'Norway',
 	'Poland',
 	'Portugal',
@@ -142,7 +139,6 @@ const europeCountrys = [
 	'Sweden',
 	'Switzerland',
 	'Ukraine',
-	'United Kingdom',
 	'Vatican City'
 ];
 
@@ -153,7 +149,6 @@ const asiaCountrys = [
 	'Bhutan',
 	'Brunei',
 	'Cambodia',
-	'China',
 	'Georgia',
 	'India',
 	'Indonesia',
@@ -166,8 +161,6 @@ const asiaCountrys = [
 	'Mongolia',
 	'Myanmar',
 	'Nepal',
-	'North Korea',
-	'Pakistan',
 	'Philippines',
 	'Russia',
 	'Singapore',
@@ -177,7 +170,6 @@ const asiaCountrys = [
 	'Tajikistan',
 	'Thailand',
 	'Timor Leste',
-	'Turkmenistan',
 	'Uzbekistan',
 	'Vietnam'
 ]
@@ -203,20 +195,7 @@ const middleEastCountrys = [
 ];
 
 const oceanPacificCountrys = [
-	'Australia',
-	'Federated Islands of Micronesia',
 	'Fiji',
-	'French Polynesia',
-	'Guam',
-	'Kiribati',
-	'Marshall Islands',
-	'Nauru',
 	'New Zealand',
-	'Paulau',
 	'Papua New Guinea',
-	'Samoa',
-	'Solomon Islands',
-	'Tonga',
-	'Tuvala',
-	'Vanuata'
 ];
