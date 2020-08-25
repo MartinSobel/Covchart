@@ -263,7 +263,7 @@ function traer_curvas(){
 function boton_editar(id){
   dibujo.seleccion = id;
   $('.edit_tamano').remove();
-  $('#canvas').append( '<i class="fa fa-plus-circle edit_tamano e_t_plus" style="font-size:48px;color:#006a71;"></i><i class="fa fa-minus-circle edit_tamano e_t_minus" style="font-size:48px;color:#006a71;"></i><i class="fa fa-rotate-left edit_tamano e_g_izq" style="font-size:48px;color:#006a71;"></i><i class="fa fa-rotate-right edit_tamano e_g_der" style="font-size:48px;color:#006a71;"></i><i class="fa fa-close edit_tamano e_close" style="font-size:48px;color:#006a71;"></i><i class="fa fa-trash edit_tamano e_trash" style="font-size:48px;color:#006a71;"></i>' );
+  $('#canvas').append( '<i class="fa fa-plus-circle edit_tamano e_t_plus" style="font-size:48px;color:#006a71;"></i><i class="fa fa-minus-circle edit_tamano e_t_minus" style="font-size:48px;color:#006a71;"></i><i class="fa fa-rotate-left edit_tamano e_g_izq" style="font-size:48px;color:#006a71;"></i><i class="fa fa-rotate-right edit_tamano e_g_der" style="font-size:48px;color:#006a71;"></i><i class="fa fa-trash edit_tamano e_trash" style="font-size:48px;color:#006a71;"></i><i class="fa fa-close edit_tamano e_close" style="font-size:48px;color:#006a71;"></i>' );
   $('.e_t_plus').click(function(){
     $("#"+dibujo.seleccion).width($("#"+dibujo.seleccion).width()+10);
   })
