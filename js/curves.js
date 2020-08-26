@@ -249,7 +249,7 @@ function traer_curvas(){
     $('.load').hide();
     nivel_carga(0)
     clearInterval(contador.setInterval);
-    $('#curves').append('<br><nav aria-label="Page navigation example" class="navigation"><ul class="pagination"><li class="page-item ant"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li><li class="page-item"><a class="page-link pagina_1" href="#">1</a></li><li class="page-item"><a class="page-link pagina_2" href="#">2</a></li><li class="page-item"><a class="page-link pagina_3" href="#">3</a></li><li class="page-item sig"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li></ul></nav><br><br>')
+    $('#curves').append('<nav aria-label="Page navigation example" class="navigation"><ul class="pagination"><li class="page-item ant"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li><li class="page-item"><a class="page-link pagina_1" href="#">1</a></li><li class="page-item"><a class="page-link pagina_2" href="#">2</a></li><li class="page-item"><a class="page-link pagina_3" href="#">3</a></li><li class="page-item sig"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li></ul></nav>')
   }
   else{
     contador.pagina == undefined || contador.pagina == 'undefined' ? contador.pagina = 1:'';
@@ -259,6 +259,7 @@ function traer_curvas(){
     temporal_contador = (contador.pagina-1) * 5;
 
     nivel_carga((contador.num_ini-temporal_contador)/(contador.num_fin-temporal_contador)*100)
+    $('.navigation').remove();
   }
 }
 function boton_editar(id){

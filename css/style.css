@@ -297,6 +297,7 @@ display: block;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 20px 0px 40px 0px;
 }
 
 .nav {
