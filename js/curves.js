@@ -30,13 +30,6 @@ $(document).ready(function(){
       }
     });
   });
-
-  $('.sig').click(function(){
-    pagina('sig')
-  })
-  $('.ant').click(function(){
-    pagina('ant')
-  })
   $('.color_linea').change(function(){
     drawCurves(seleccion_input.ultimo)
   })
@@ -46,10 +39,6 @@ $(document).ready(function(){
 });
 
 drawCurves(southAmericaCountrys);
-$('.pagina_1, .pagina_2, .pagina_3').click(function(){
-  contador.pagina = parseInt(this.innerHTML)
-  pagina()
-})
 
 function deleteCurves(){
   let pos = document.getElementById('curves');
@@ -82,7 +71,6 @@ function drawCurves(inputAarray){
 
   traer_curvas();
   contador.setInterval = setInterval(traer_curvas, 500);
-  numeros_de_pagina();
 }
 
 function pagina(pag){
@@ -91,6 +79,9 @@ function pagina(pag){
       contador.pagina += 1;
       contador.num_fin = 5*contador.pagina;
       contador.num_ini = (5*contador.pagina)-5;
+      $(".figuras_menu").remove();
+      traer_curvas();
+      contador.setInterval = setInterval(traer_curvas, 500);
     }
   }
   else if(pag == 'ant'){
@@ -98,17 +89,18 @@ function pagina(pag){
       contador.pagina -= 1;
       contador.num_fin = 5*contador.pagina;
       contador.num_ini = (5*contador.pagina)-5;
+      $(".figuras_menu").remove();
+      traer_curvas();
+      contador.setInterval = setInterval(traer_curvas, 500);
     }
   }
   else{
     contador.num_fin = 5*contador.pagina;
     contador.num_ini = (5*contador.pagina)-5;
+    $(".figuras_menu").remove();
+    traer_curvas();
+    contador.setInterval = setInterval(traer_curvas, 500);
   }
-
-  $(".figuras_menu").remove();
-  traer_curvas();
-  contador.setInterval = setInterval(traer_curvas, 500);
-  numeros_de_pagina();
 }
 
 function drawCurve(inputCountry, div){
@@ -250,6 +242,17 @@ function traer_curvas(){
     nivel_carga(0)
     clearInterval(contador.setInterval);
     $('#curves').append('<nav aria-label="Page navigation example" class="navigation"><ul class="pagination"><li class="page-item ant"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li><li class="page-item"><a class="page-link pagina_1" href="#">1</a></li><li class="page-item"><a class="page-link pagina_2" href="#">2</a></li><li class="page-item"><a class="page-link pagina_3" href="#">3</a></li><li class="page-item sig"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li></ul></nav>')
+    $('.pagina_1, .pagina_2, .pagina_3').click(function(){
+      contador.pagina = parseInt(this.innerHTML)
+      pagina();
+    })
+    $('.sig').click(function(){
+      pagina('sig');
+    })
+    $('.ant').click(function(){
+      pagina('ant');
+    })
+    numeros_de_pagina();
   }
   else{
     contador.pagina == undefined || contador.pagina == 'undefined' ? contador.pagina = 1:'';
@@ -308,10 +311,17 @@ function numeros_de_pagina(){
   else{
     $('.navigation').fadeIn();
   }
-
+  
+  console.log(contador.array.length)
+  console.log(((contador.pagina+2)*5))
   if(contador.array.length > ((contador.pagina+2)*5) ){
     $('.pagina_1').html(contador.pagina)
     $('.pagina_2').html(contador.pagina+1)
     $('.pagina_3').html(contador.pagina+2)
+  }
+  else{
+    $('.pagina_1').html(parseInt(contador.array.length/5)-1)
+    $('.pagina_2').html(parseInt(contador.array.length/5))
+    $('.pagina_3').html(parseInt(contador.array.length/5)+1)
   }
 }
