@@ -249,6 +249,7 @@ function traer_curvas(){
     $('.load').hide();
     nivel_carga(0)
     clearInterval(contador.setInterval);
+    $('#curves').append('<br><nav aria-label="Page navigation example" class="navigation"><ul class="pagination"><li class="page-item ant"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li><li class="page-item"><a class="page-link pagina_1" href="#">1</a></li><li class="page-item"><a class="page-link pagina_2" href="#">2</a></li><li class="page-item"><a class="page-link pagina_3" href="#">3</a></li><li class="page-item sig"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li></ul></nav><br><br>')
   }
   else{
     contador.pagina == undefined || contador.pagina == 'undefined' ? contador.pagina = 1:'';
@@ -300,7 +301,12 @@ function nivel_carga(porcentaje){
   $('.cp-full, .cp-regular').css({'transform':'rotate('+1.8*porcentaje+'deg)'})
 }
 function numeros_de_pagina(){
-  contador.array.length < 6 ? $('.navigation').hide():$('.navigation').fadeIn();
+  if(contador.array.length < 6){
+    $('.navigation').hide();
+  }
+  else{
+    $('.navigation').fadeIn();
+  }
 
   if(contador.array.length > ((contador.pagina+2)*5) ){
     $('.pagina_1').html(contador.pagina)
