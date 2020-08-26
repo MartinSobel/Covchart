@@ -1,7 +1,6 @@
 # Do you want to help?
 ### Pull requests are welcome, here is a *to-do* list:
 **Improvements:**
-- Create tool for delete selected curve
 - Create button for share the creation in social media
 - Create searchbox for curves
 - Adapt covchart for cell phones
