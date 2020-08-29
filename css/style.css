@@ -42,8 +42,9 @@ main {
 aside {
     color: white;
     padding: 1rem;
-    margin: 0.4rem;
+    margin: 0.1rem;
     min-height: 100%;
+    max-width: 20%;
     background-color: #03747c;
 }
 
@@ -64,8 +65,8 @@ p{
     margin: 0.5rem;
     min-width: 75%;
     max-width: 75%;
-    min-height: 95%;
-    max-height: 95%;
+    min-height: 80vh;
+    max-height: 80vh;
     background-color: #fff;
     border: 1px solid #84a9ac;
 }
@@ -85,7 +86,7 @@ canvas{
     border-radius: 10px;
     background-color: #3498DB;
     color: white;
-    padding: 0.6rem;
+    padding: 0.4rem;
     font-size: 1rem;
     border: none;
     cursor: pointer;
@@ -293,11 +294,9 @@ display: block;
 }
 
 .navigation{
-    margin-right: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 20px 0px 40px 0px;
 }
 
 .nav {
