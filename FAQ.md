@@ -3,7 +3,7 @@
 ***Covchart is a tool for creating art, from the stasts of the COVID-19***
 
 - Can I help you with something?  
-***Yes, you should check the README.md file***
+***Yes, you should check the issues tab***
 
 - Why it's in english?  
 ***Is one of the most widely used languages in the world***
